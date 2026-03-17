@@ -16,6 +16,8 @@ Das berühmte [Hotel Hilbert](https://de.wikipedia.org/wiki/Hilberts_Hotel) ist 
 
 Was passiert, wenn abzählbar unendlich viele Käufer, abzählbar unendlich viele Anbieter, eine unendliche Nachfrage und ein unendliches Angebot zusammentreffen?
 
+Als Beispiel für ein spieltheoretisches Gleichgewicht betrachten wir folgendes Szenario:
+
 Jede Tankstelle $T_n$ kauft Benzin vom Großhändler zum Einkaufspreis $e_n$ ein (z.B. 1 Euro/liter), verkauft eine Menge $m_n$ (z.B. 1 liter/Min) zum Verkaufspreis $v_n$ (z.B. 2 Euro/liter) inkl. Umsatzsteuer $s$ (z.B. 0.19 für 19% Umsatzsteuer) und hat laufende Betriebskosten $b_n$ (z.B. 1 Euro/Min) für Pacht, Gehälter usw. Die Eröffnung einer neuen Tankstelle verursacht einmalige Investitionskosten mit einer laufenden Belastung (Abschreibung) $f_n$ (z.B. 0.5 Euro/Min). Bei den etablierten Tankstellen der Kette sind die Investitionskosten längst abgeschrieben ($f_n=0$). 
 
 Eine Tankstelle $T_n$ ist mit einer Wahrscheinlichkeit $q = P(T_n=R)$ reich ($R$) und verfügt über hohe Rücklagen, oder sie ist mit einer Wahrscheinlichkeit $P(T_n=A) = (1-q)$ arm ($A$) und ohne Rücklagen. Tritt ein neuer Konkurrent ein und eröffnet eine neue Tankstelle, reagiert der Markt entweder aggressiv (Ereignis $a$) mit Konkurrenzkampf und Dumpingpreisen, oder friedlich (Ereignis $f$) mit Aufteilung des Marktes. Reiche Tankstellen können die Kosten $K$ eines Konkurrenzkampf ohne Gewinneinbuße aus ihren Rücklagen bezahlen ($K_n(a|T_n=R)=0$); arme Tankstellen müssen die Kosten $K$ des Konkurrenzkampf als Verlust (Gewinneinbuße $K_n(a|T_n=A) > 0$) verbuchen (z.B. 1 Euro/Min). Eine friedliche Marktaufteilung verursache keine Kosten ($K_n(f|T_n=R)=K_n(f|T_n=A)=0$).
@@ -46,9 +48,9 @@ Die Menge $m_n$, die an einer Tankstelle verkauft wird, hängt von der Gesamtnac
 
 Zunächst können wir das Nash-Gleichgewicht bei $M$ Kunden und $N$ Tankstellen ohne Markteintritte berechnen. Jede Tankstelle versucht ihren Gewinn zu maximieren:  
 $U_n(v_n) → \max$ ⇔ $∂U_n / ∂v_n = 0$  
-Im Nash-Gleichgewicht (Symmetric Nash Equilibrium, SNE) kann keine Tankstelle ihren Gewinn durch einseitige Strategieänderung steigern, d.h. im Nash-Gleichgewicht gilt für alle Tankstellen: $∂U_n / ∂v_n = 0$
+Im Nash-Gleichgewicht (Symmetric Nash Equilibrium, SNE) kann keine Tankstelle ihren Gewinn durch einseitige Strategieänderung steigern, d.h. im Nash-Gleichgewicht gilt für **alle** Tankstellen: $∂U_n / ∂v_n = 0$
 
-Für symmetrische Nash-Gleichgewichte (SNE) sind alle Tankstellen identisch, d.h. es gilt $e_n ​= e, b_n ​= b, r_n ​= r$ für alle Tankstellen $T_n$.
+Für symmetrische Nash-Gleichgewichte (SNE) sind alle Tankstellen identisch, d.h. es gilt $e_n ​= e$, $b_n ​= b$, $r_n ​= r$ für alle Tankstellen $T_n$.
 
 [hilbert_gas_stations_nash.py](../src/hilbert_gas_stations_nash.py) berechnet das Nash-Gleichgewicht bei $M$ Kunden und $N$ Tankstellen ohne Markteintritte:  
 $v_{n,sne} = (M N h v_0 + M N m_0 + M e_n h s + M e_n h + N^2 e_n r s + N^2 e_n r - N e_n r s - N e_n r) / (M N h + M h + N^2 r - N r)$
@@ -87,9 +89,9 @@ Kurz gesagt: Bei Hilbert-Tankstellen im Grenzübergang $N → ∞$ hängt das Na
 
 ![hilbert_gas_stations_nash1.png](hilbert_gas_stations_nash1.png)
 
-Im Fall unendlich abzählbarer Anbieter wird der Gleichgewichtspreis nicht von der Anzahl der Konkurrenten bestimmt, sondern von der relativen Dichte $M/N$ der Menge der Hotelgäste und der Menge der Tankstellen.
+Im Fall abzählbar unendlich vieler Anbieter wird der Gleichgewichtspreis nicht von der Anzahl der Konkurrenten bestimmt, sondern von der relativen Dichte $M/N$ der Menge der Hotelgäste und der Menge der Tankstellen.
 
-Um den minimalen Gleichgewichtspreis bei $M/N → 0$ zu erhalten, müssten Hilberts Hotelgäste nur ein infinitesimal kleines Tröpfchen Benzin von jeder Hilbert-Tankstelle kaufen. Auf Dauer kann aber kein Anbieter vom Tröpfchen-Verkauf leben. Eine zusätzliche Randbedingung $U_n(v_n) ≥ 0$ würde sicherstellen, dass der Gleichgewichtspreis so hoch ist, dass kein Anbieter Verluste macht. Aus der Randbedingung $U_n(v_n) ≥ 0$ folgt ein minimal erforderliches $(M/N)_{min}$. Unterschreitet $M/N$ die kritische Schwelle $(M/N)_{min}$, schliessen Tankstellen mit Verlust und $M/N$ bleibt groß genug, um die Randbedingung einzuhalten. Im Grenzübergang $M,N → ∞$ bleibt es natürlich trotzdem bei abzählbar unendlich vielen Hilbert-Tankstellen, aber eine Mindestanzahl Kunden pro Tankstelle $M/N ≥ (M/N)_{min}$ und ein Mindestnutzen $U_n(v_n) ≥ 0$ wird eingehalten. Im Beispiel führt $U_n(v_n) ≥ 0$ zu $M/N ≥ (M/N)_{min} ≈ 0.9282$ und damit zu einem Gleichgewichtspreis von $v_{n,sne}(M/N=0.9282, N→∞) ≈ 1.2991$.
+Um den minimalen Gleichgewichtspreis bei $M/N → 0$ zu erhalten, müssten Hilberts Hotelgäste nur ein infinitesimal kleines Tröpfchen Benzin von jeder Hilbert-Tankstelle kaufen. Auf Dauer kann aber kein Anbieter vom Tröpfchen-Verkauf leben. Eine zusätzliche Randbedingung $U_n(v_n) ≥ 0$ würde sicherstellen, dass der Gleichgewichtspreis so hoch ist, dass kein Anbieter Verluste macht. Aus der Randbedingung $U_n(v_n) ≥ 0$ folgt ein minimal erforderliches $M/N_{min}$. Unterschreitet $M/N$ die kritische Schwelle $M/N_{min}$, schliessen Tankstellen mit Verlust und $M/N$ bleibt groß genug, um die Randbedingung einzuhalten. Im Grenzübergang $M,N → ∞$ bleibt es natürlich trotzdem bei abzählbar unendlich vielen Hilbert-Tankstellen, aber eine Mindestanzahl Kunden pro Tankstelle $M/N ≥ M/N_{min}$ und ein Mindestnutzen $U_n(v_n) ≥ 0$ wird eingehalten. Im Beispiel führt $U_n(v_n) ≥ 0$ zu $M/N ≥ M/N_{min} ≈ 0.9282$ und damit zu einem Gleichgewichtspreis von $v_{n,sne}(M/N=0.9282, N→∞) ≈ 1.2991$.
 
 Ein weiteres interessantes Phänomen zeigt sich bei hoher Kundenanzahl und wenigen Tankstellen: Bei wenigen Anbietern und hoher Kundenzahl kann der Zutritt eines weiteren Anbieters die Preise erhöhen, statt dass die Preise -wie intuitiv zu erwarten wäre- durch mehr Konkurrenten sinken. Bei viel mehr Kunden als Anbietern ist der Konkurrenzdruck gering und wird durch einen zusätzlichen Anbieter kaum größer; der Preis wird praktisch nur durch eine zurückgehende Nachfrage begrenzt. Ein neuer Konkurrent verringert aber die Verkaufsmenge pro Tankstelle und damit auch die Mengenänderung pro Tankstelle durch Preiserhöhung. Spielt der Konkurrenzdruck fast keine Rolle, kann sich ein höherer Preis bei geringerer Menge pro Tankstelle lohnen. Erst wenn $N$ groß genug wird, schlägt der klassische Wettbewerbseffekt durch. Man sieht den Effekt an der Erhöhung des Verkaufspreises z.B. bei $M=1000$ und $N < 6$ im folgenden Diagramm (Gleichgewichtspreis $v$ über Anzahl Tankstellen $N$ bei unterschiedlicher Kundenanzahl $M$):
 
@@ -166,7 +168,7 @@ Damit verhalten sich Hilbert-Tankstellen für $N → ∞$ und Markteintritt im G
 * Sind $N = (N_{active} + L_{active})$ die aktiven (einen Konkurrenzkampf überlebenden) Anbieter, dann legt das Verhältnis $M/N$ die Verkaufspreise und -mengen auf die gleiche Weise fest wie beim Nash-Gleichgewicht ohne Markteintritt, d.h. mit minimalem Verkaufspreis $v = e_n \cdot (1 + s) = 1.19$ für $M/N → 0$, $v = (e_n \cdot r \cdot s + e_n \cdot r + h \cdot v_0 + m_0) / (h + r) = 1.307$ für $M/N = 1$ und $v = v_0 + m_0 / h$ für $M/N → ∞$.
 * Ein Markteintritt verändert also die Zahl aktiver Anbieter, danach greift wieder das Nash-Gleichgewicht ohne Markteintritt mit der Marktdichte $M / (N_{active} + L_{active})$.
 
-Das Diagramm zeigt den Verkaufspreis $v$ über $L/N$ und $M/(N+L)$ für $N → ∞$, $q = 0.5$, Beispielwerten und die beiden Strategien T1f und T1af:
+Das Diagramm zeigt den Verkaufspreis $v$ über $L/N$ und $M/(N+L)$ für $N → ∞$, $q = 0.5$, Beispielwerten und die beiden Strategien T1f und T1af:  
 ![hilbert_gas_stations_inf_results.png](hilbert_gas_stations_inf_results.png)
 
 ## Literatur, Verweise<a id="literatur-verweise"></a>

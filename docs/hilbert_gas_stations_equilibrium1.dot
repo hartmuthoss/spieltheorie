@@ -1,0 +1,31 @@
+digraph { 
+
+    edge [arrowhead=none]
+    node [label="", shape=point]
+
+    T1 -> T1R [label="q"]
+    T1 -> T1A [label="1-q"]
+    T1R -> T1RaT2 [label="a"]
+    T1R -> T1Rf [label="f"]
+    T1A -> T1AaT2 [label="a"]
+    T1A -> T1Af [label="f"]
+
+    T1RaT2 -> T1RaT2R [label="q"]
+    T1RaT2 -> T1RaT2A [label="1-q"]
+    T1AaT2 -> T1AaT2R [label="q"]
+    T1AaT2 -> T1AaT2A [label="1-q"]
+
+    T1 [label="T1", shape=circle]
+    T1R [label="T1=R", shape=circle]
+    T1A [label="T1=A", shape=circle]
+    T1RaT2 [label="T2", shape=circle]
+    T1AaT2 [label="T2", shape=circle]
+
+    T1Rf [label="U1(f)\nU2(f)", shape=rect]
+    T1Af [label="U1(f)\nU2(f)", shape=rect]
+    T1RaT2R [label="U1(a|T1=R,T2=R)\nU2(a|T1=R,T2=R)", shape=rect]
+    T1RaT2A [label="U1(a|T1=R,T2=A)\nU2(a|T1=R,T2=A)", shape=rect]
+    T1AaT2R [label="U1(a|T1=A,T2=R)\nU2(a|T1=A,T2=R)", shape=rect]
+    T1AaT2A [label="U1(a|T1=A,T2=A)\nU2(a|T1=A,T2=A)", shape=rect]
+
+}

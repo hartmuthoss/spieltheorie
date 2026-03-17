@@ -1,0 +1,1 @@
+@if exist "%ProgramFiles(x86)%\Microsoft Visual Studio\Shared\Python39_64\python.exe" ( set "PATH=%ProgramFiles(x86)%\Microsoft Visual Studio\Shared\Python39_64;%ProgramFiles(x86)%\Microsoft Visual Studio\Shared\Python39_64\Scripts;%PATH%" )

@@ -1,0 +1,21 @@
+digraph { 
+
+    edge [arrowhead=none]
+    node [label="", shape=point]
+
+    a -> b [label="K1:\nErster\nKonkurrent"]
+    a -> c [label="M1:\nTankstellen-\nMonopol"]
+    b -> d [label="A2 (p):\naggressiv"]
+    b -> e [label="F2 (1-p):\nfriedlich"]
+    e -> f [label="K3:\nZweiter\nKonkurrent"]
+    e -> g [label="M3:\nZwei\nTankstellen"]
+    f -> h [label="A4 (p):\naggressiv"]
+    f -> i [label="F4 (1-p):\nfriedlich"]
+
+    c [label="u1=9, u2=0, u3=0", shape=rect]
+    d [label="u1=0, u2=-5, u3=0", shape=rect]
+    g [label="u1=4.625, u2=-0.375, u3=0", shape=rect]
+    h [label="u1=0, u2=-5, u3=-5", shape=rect]
+    i [label="u1=2.75, u2=-2.25, u3=-2.25", shape=rect]
+
+}

@@ -1,0 +1,37 @@
+digraph { 
+
+    edge [arrowhead=none]
+
+    G  -> K   [label="p"]
+    K  -> BK  [label="B"]
+    BK -> SBK [label="S|B"]
+    BK -> RBK [label="R|B"]
+    K  -> QK  [label="Q"]
+    QK -> SQK [label="S|Q"]
+    QK -> RQK [label="R|Q"]
+
+    G  -> F   [label="1-p"]
+    F  -> BF  [label="B"]
+    BF -> SBF [label="S|B"]
+    BF -> RBF [label="R|B"]
+    F  -> QF  [label="Q"]
+    QF -> SQF [label="S|Q"]
+    QF -> RQF [label="R|Q"]
+
+    G   [label="G", shape=circle]
+    K   [label="K", shape=circle]
+    BK  [label="B|K", shape=circle]
+    SBK [label="(1,-1)", shape=rect]
+    RBK [label="(3,0)", shape=rect]
+    QK  [label="Q|K", shape=circle]
+    SQK [label="(0,-1)", shape=rect]
+    RQK [label="(2,0)", shape=rect]
+
+    BF  [label="B|F", shape=circle]
+    SBF [label="(0,2)", shape=rect]
+    RBF [label="(2,0)", shape=rect]
+    QF  [label="Q|F", shape=circle]
+    SQF [label="(1,2)", shape=rect]
+    RQF [label="(3,0)", shape=rect]
+
+}

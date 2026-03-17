@@ -1,0 +1,65 @@
+digraph { 
+
+    edge [arrowhead=none]
+    node [label="", shape=point]
+
+    K -> KR [label="q"]
+    K -> KA [label="1-q"]
+    
+    KR -> KRM [label="e"]
+    KR -> KRn [label="n"]
+    KA -> KAM [label="e"]
+    KA -> KAn [label="n"]
+
+    KRM -> KRMR [label="q"]
+    KRM -> KRMA [label="1-q"]
+    KAM -> KAMR [label="q"]
+    KAM -> KAMA [label="1-q"]
+
+    KRMR -> KRMRa [label="a"]
+    KRMR -> KRMRf [label="f"]
+    KRMA -> KRMAa [label="a"]
+    KRMA -> KRMAf [label="f"]
+    KAMR -> KAMRa [label="a"]
+    KAMR -> KAMRf [label="f"]
+    KAMA -> KAMAa [label="a"]
+    KAMA -> KAMAf [label="f"]
+
+    KRMRa -> KRMRah [label="h"]
+    KRMRa -> KRMRav [label="v"]
+    KRMAa -> KRMAah [label="h"]
+    KRMAa -> KRMAav [label="v"]
+    KAMRa -> KAMRah [label="h"]
+    KAMRa -> KAMRav [label="v"]
+    KAMAa -> KAMAah [label="h"]
+    KAMAa -> KAMAav [label="v"]
+
+    K [label="K", shape=circle]
+    KR [label="R", shape=circle]
+    KA [label="A", shape=circle]
+
+    KRM [label="M", shape=circle]
+    KRn [label="(0, 18)", shape=rect]
+    KAM [label="M", shape=circle]
+    KAn [label="(0, 18)", shape=rect]
+
+    KRMR [label="R", shape=circle]
+    KRMA [label="A", shape=circle]
+    KAMR [label="R", shape=circle]
+    KAMA [label="A", shape=circle]
+
+    KRMRf [label="(2, 9)", shape=rect]
+    KRMAf [label="(2, 9)", shape=rect]
+    KAMRf [label="(2, 9)", shape=rect]
+    KAMAf [label="(2, 9)", shape=rect]
+
+    KRMRah [label="(-6, -1)", shape=rect]
+    KRMAah [label="(13, 11)", shape=rect]
+    KAMRah [label="(-6, 17)", shape=rect]
+    KAMAah [label="(13, -1)", shape=rect]
+    KRMRav [label="(-5, 10)", shape=rect]
+    KRMAav [label="(-7, 17)", shape=rect]
+    KAMRav [label="(-3, 8)",  shape=rect]
+    KAMAav [label="(-4, 17)", shape=rect]
+
+}

@@ -15,3 +15,6 @@ Inhalt:
 * [pbe_two_gas_stations.py](src/pbe_two_gas_stations.py): Pythonskript zur Berechnung perfekter Bayes-Gleichgewichte (Perfect Bayesian equilibrium, PBE) am Beispiel zweier konkurrierenden Tankstellen.
 
 * Was passiert, wenn abzählbar unendlich viele Käufer, abzählbar unendlich viele Anbieter, eine unendliche Nachfrage und ein unendliches Angebot zusammentreffen? Dieses Problem wird in den [Hilbert-Tankstellen](docs/HilbertTankstellen.md) berechnet.
+
+* Das [unendlich oft wiederholte Gefangenendilemma](WiederholtesGefangenendilemma.md) zeigt Beispiele für das Folk-Theorem, das One-Shot-Deviation-Principle und Markov-Prozesse im unendlich oft wiederholten Spiel.
+

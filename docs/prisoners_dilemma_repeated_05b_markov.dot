@@ -1,0 +1,31 @@
+digraph { 
+
+    edge [arrowhead=normal, arrowtail=normal]
+    node [label="", shape=point]
+
+    Start->LL [dir=forward, label=""]
+
+    LL->LL [dir=forward, label="(1-q1)(1-q2)"]
+    LL->GL [dir=forward, label="q1(1-q2)"]
+    LL->LG [dir=forward, label="q2(1-q1)"]
+    LL->GG [dir=forward, label="q1q2"]
+
+    GL->GLLG [dir=forward, label="(1-q1)"]
+    GL->GG [dir=forward, label="q1"]
+    GLLG->GL [dir=forward, label="q1"]
+    GLLG->LL [dir=forward, label="(1-q1)"]
+
+    LG->LGGL [dir=forward, label="(1-q2)"]
+    LG->GG [dir=forward, label="q2"]
+    LGGL->LG [dir=forward, label="q2"]
+    LGGL->LL [dir=forward, label="(1-q2)"]
+
+    GG->GG [dir=forward, label="1"]
+
+    LL [label="Z1: (L,L)", shape=circle]
+    LG [label="Z2: (L,G)", shape=circle]
+    GL [label="Z3: (G,L)", shape=circle]
+    GG [label="Z4: (G,G)", shape=circle]
+    GLLG [label="Z5: (L,G)", shape=circle]
+    LGGL [label="Z6: (G,L)", shape=circle]
+}

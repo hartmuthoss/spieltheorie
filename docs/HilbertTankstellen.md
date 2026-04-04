@@ -103,7 +103,7 @@ Dieser Effekt entsteht nur bei schwachem Wettbewerb (kleines $r$) und sehr hoher
 
 Häufiges Problem: Gesucht ist die Lösung für $∂U(x,y)/∂x = 0$ mit einer Nebenbedingung $F(x,y) = 0$. 
 
-Beispiel: Der Gewinn eines Unternehmens hänge vom Stückpreis $x$ sowie der verkauften Menge $y$ ab. Für die verkaufte Menge $y$ und den Stückpreis $x$ gelte wiederum ein Zusammenhang $F(x,y) = 0$. Um den Gewinn zu maximieren, sucht das Unternehmen $∂U(x,y)/∂x = 0$ unter der Nebenbedingung $F(x,y) = 0$.
+Beispiel: Der Gewinn eines Unternehmens hänge vom Stückpreis $x$ sowie der verkauften Menge $y$ ab. Für die verkaufte Menge $y$ und den Stückpreis $x$ gelte wiederum ein Zusammenhang $F(x,y) = 0$. Um den Gewinn zu maximieren, sucht das Unternehmen Lösungen der Gleichung $∂U(x,y)/∂x = 0$ unter der Nebenbedingung $F(x,y) = 0$.
 
 Implizites Differenzieren liefert $dy/dx$:  
 $F(x,y) = 0$  

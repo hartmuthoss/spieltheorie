@@ -471,6 +471,8 @@ def search_for_q_intervals(q_condition, q, q_interval, logger):
             return [ q_sol ]
         elif isinstance(q_sol, Union): # Bedingung durch mehrere Intervalle über q erfüllbar
             return [ q_interval for q_interval in q_sol.args if q_interval.sup - q_interval.inf > 1.0e-6 ]
+        elif isinstance(q_sol, FiniteSet): # Bedingung durch ein oder mehrere Intervalle über q erfüllbar
+            return [ Interval(q_value, q_value) for q_value in q_sol.args if q_interval.contains(q_value) ]
         else:
             assert_or_die(False, f"solveset_recursive returned {q_sol} with unknown type {type(q_sol)}", logger)
             return [] 

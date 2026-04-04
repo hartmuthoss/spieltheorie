@@ -16,5 +16,5 @@ Inhalt:
 
 * Was passiert, wenn abzählbar unendlich viele Käufer, abzählbar unendlich viele Anbieter, eine unendliche Nachfrage und ein unendliches Angebot zusammentreffen? Dieses Problem wird in den [Hilbert-Tankstellen](docs/HilbertTankstellen.md) berechnet.
 
-* Das [unendlich oft wiederholte Gefangenendilemma](WiederholtesGefangenendilemma.md) zeigt Beispiele für das Folk-Theorem, das One-Shot-Deviation-Principle und Markov-Prozesse im unendlich oft wiederholten Spiel.
+* Das [unendlich oft wiederholte Gefangenendilemma](docs/WiederholtesGefangenendilemma.md) zeigt Beispiele für das Folk-Theorem, das One-Shot-Deviation-Principle und Markov-Prozesse im unendlich oft wiederholten Spiel.
 

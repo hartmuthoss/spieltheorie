@@ -1,6 +1,6 @@
 # Notizen zur Spieltheorie
 
-Notizen und Skripte rund um die Spieltheorie auf Einsteigerniveau, im Aufbau begriffen.
+Notizen und Skripte rund um die Spieltheorie, auf Einsteigerniveau, vom Amateur und im Aufbau begriffen.
 
 Inhalt:
 

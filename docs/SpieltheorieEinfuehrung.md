@@ -8,21 +8,23 @@
     - [Extensivform](#extensivform)
   - [Nash-Gleichgewicht bei vollständiger Information](#nash-gleichgewicht-bei-vollstandiger-information)
     - [Nash-Gleichgewicht in reinen Strategien mit kleiner Strategiemenge](#nash-gleichgewicht-in-reinen-strategien-mit-kleiner-strategiemenge)
-      - [Beispiel 1: konkurrierende Unternehmen](#beispiel-1-konkurrierende-unternehmen)
+      - [Beispiel 1: Konkurrierende Unternehmen](#beispiel-1-konkurrierende-unternehmen)
     - [Nash-Gleichgewicht in reinen Strategien mit großer oder unbegrenzter Strategiemenge](#nash-gleichgewicht-in-reinen-strategien-mit-großer-oder-unbegrenzter-strategiemenge)
-      - [Beispiel 2: konkurrierende Unternehmen](#beispiel-2-konkurrierende-unternehmen)
-      - [Beispiel 3: konkurrierende Tankstellen](#beispiel-3-konkurrierende-tankstellen)
+      - [Beispiel 2: Konkurrierende Unternehmen](#beispiel-2-konkurrierende-unternehmen)
+      - [Beispiel 3: Konkurrierende Tankstellen](#beispiel-3-konkurrierende-tankstellen)
     - [Nash-Gleichgewicht in gemischten Strategien](#nash-gleichgewicht-in-gemischten-strategien)
-      - [Beispiel 4: Diebstahlkontrolle](#beispiel-4-diebstahlkontrolle)
+      - [Satz von Nash](#satz-von-nash)
+      - [Beispiel 4: Sherlock Holmes und Professor Moriarty](#beispiel-4-sherlock-holmes-und-professor-moriarty)
+      - [Beispiel 5: Diebstahlkontrolle](#beispiel-5-diebstahlkontrolle)
     - [Rückwärtsinduktion](#ruckwartsinduktion)
     - [Sequentielle Spiele](#sequentielle-spiele)
-      - [Beispiel 5: Markteintritt](#beispiel-5-markteintritt)
+      - [Beispiel 6: Markteintritt](#beispiel-6-markteintritt)
       - [Chainstore-Paradoxon](#chainstore-paradoxon)
   - [Bayes-Gleichgewicht bei unvollständiger Information](#bayes-gleichgewicht-bei-unvollstandiger-information)
-    - [Beispiel 6: Sheriff's dilemma](#beispiel-6-sheriffs-dilemma)
-    - [Beispiel 7: Markteintritt](#beispiel-7-markteintritt)
+    - [Beispiel 7: Sheriff's dilemma](#beispiel-7-sheriffs-dilemma)
+    - [Beispiel 8: Markteintritt](#beispiel-8-markteintritt)
     - [Perfect Bayesian Equilibrium (PBE)](#perfect-bayesian-equilibrium-pbe)
-    - [Beispiel 8: Bier-Quiche-Spiel](#beispiel-8-bier-quiche-spiel)
+    - [Beispiel 9: Bier-Quiche-Spiel](#beispiel-9-bier-quiche-spiel)
   - [Hilbert-Tankstellen](#hilbert-tankstellen)
   - [Folk-Theorem und unendlich oft wiederholte Spiele](#folk-theorem-und-unendlich-oft-wiederholte-spiele)
   - [Paradoxa](#paradoxa)
@@ -120,17 +122,17 @@
 
 Das [Nash-Gleichgewicht](https://de.wikipedia.org/wiki/Nash-Gleichgewicht) beschreibt in nicht-kooperativen Spielen eine Kombination von Strategien, wobei jeder Spieler genau eine Strategie wählt, von der aus es für keinen Spieler sinnvoll ist, von seiner gewählten Strategie als einziger abzuweichen. In einem Nash-Gleichgewicht ist daher jeder Spieler auch im Nachhinein mit seiner Strategiewahl einverstanden, er würde sie genauso wieder treffen. Im Nash-Gleichgewicht kann sich kein Spieler durch eine einseitige Änderung seiner Strategie verbessern. Die Strategien der Spieler sind gegenseitig beste Antworten.
 
-Dominante Strategien: Hängt die optimale Strategie nicht von der Entscheidung der Mitspieler ab, ist diese Strategie dominant. Was ein Spieler tut, ist das Beste für ihn, ganz unabhängig davon, was die anderen tun. Beispiel Gefangenendilemma: Gestehen ist die dominante Strategie, da sie unabhängig von der Entscheidung des Mitgefangenen zur Strafminderung führt. Für eine dominante Strategie $s_i^o$ gilt: $u_i(s_i^o,s_{-i}) ≥ u_i(s_i,s_{-i})$ für jede beliebige Wahl $s_{-i}$ der Mitspieler und für jede eigene Wahl $s_i ∈ S_i$.
+Dominante Strategien: Hängt die optimale Strategie nicht von der Entscheidung der Mitspieler ab, ist diese Strategie dominant. Was ein Spieler tut, ist das Beste für ihn, ganz unabhängig davon, was die anderen tun. Beispiel Gefangenendilemma: Gestehen ist die dominante Strategie, da sie unabhängig von der Entscheidung des Mitgefangenen zur Strafminderung führt. Eine Strategie kann dominiert sein, aber trotzdem ein Gleichgewicht. Für eine dominante Strategie $s_i^o$ gilt: $u_i(s_i^o,s_{-i}) ≥ u_i(s_i,s_{-i})$ für jede beliebige Wahl $s_{-i}$ der Mitspieler und für jede eigene Wahl $s_i ∈ S_i$.
 
 Reine Strategien: Der Spieler trifft eine ganz bestimmte Entscheidung.
 
 Gemischte Strategien: Der Spieler trifft eine zufällige Entscheidung zwischen zwei oder mehr möglichen Handlungsmöglichkeiten (den reinen Strategien), aber mit bestimmten Wahrscheinlichkeiten für die reinen Strategien.
 
-Während die Existenz eines Nash-Gleichgewichtes in reinen Strategien nicht garantiert werden kann, existiert mindestens ein Nash-Gleichgewicht bei einem Spiel in gemischten Strategien, sofern von endlich vielen reinen Strategien ausgegangen wird.
+Während die Existenz eines Nash-Gleichgewichtes in reinen Strategien nicht garantiert werden kann, existiert mindestens ein Nash-Gleichgewicht bei einem Spiel in gemischten Strategien, sofern von endlich vielen reinen Strategien ausgegangen wird. 
 
 ### Nash-Gleichgewicht in reinen Strategien mit kleiner Strategiemenge<a id="nash-gleichgewicht-in-reinen-strategien-mit-kleiner-strategiemenge"></a>
 
-#### Beispiel 1: konkurrierende Unternehmen<a id="beispiel-1-konkurrierende-unternehmen"></a>
+#### Beispiel 1: Konkurrierende Unternehmen<a id="beispiel-1-konkurrierende-unternehmen"></a>
 
 Beispiel für ein nicht-kooperatives Zweipersonenspiel mit 4 reinen Strategien pro Spieler (keine Zufallsentscheidungen). Die Spieler seien 2 konkurrierende Unternehmen, die ihre Preise unabhängig voneinander wählen müssen. Der Gewinn jedes Unternehmens (= Nutzen) hängt von der eigenen Wahl und der des Konkurrenten ab. Die Spielmatrix mit Nutzen $u_1$ des Unternehmens 1, Nutzen $u_2$ des Unternehmens 2, Preiswahlmöglichkeiten $s_{11},...,s_{14}$ des Unternehmens 1 und Preiswahlmöglichkeiten $s_{21},...,s_{24}$ des Unternehmens 2 habe folgende Werte:
 
@@ -161,7 +163,7 @@ $s_{13}$ → $s_{24}$ → $s_{12}$ → $s_{22}$ → $s_{12}$ → Nash-Gleichgewi
 
 ### Nash-Gleichgewicht in reinen Strategien mit großer oder unbegrenzter Strategiemenge<a id="nash-gleichgewicht-in-reinen-strategien-mit-großer-oder-unbegrenzter-strategiemenge"></a>
 
-#### Beispiel 2: konkurrierende Unternehmen<a id="beispiel-2-konkurrierende-unternehmen"></a>
+#### Beispiel 2: Konkurrierende Unternehmen<a id="beispiel-2-konkurrierende-unternehmen"></a>
 
 Beispiel für ein nicht-kooperatives Zweipersonenspiel mit reinen und reellwertigen Strategien (keine Zufallsentscheidungen, aber eine unbegrenzte Anzahl von Strategien/Entscheidungsmöglichkeiten). Zwei konkurrierende, nicht kooperierende Unternehmen mit gleichem Produkt und gleichen Kosten. Der Stückpreis hängt von der verkauften Menge ab (Mengenrabatt): Stückpreis $p = 100 - 2(x_1+x_2)$, wobei Unternehmen 1 $x_1$ Einheiten und Unternehmen 2 $x_2$ Einheiten verkauft. Jede verkaufte Einheit verusacht Kosten von 4. Beispielsweise können $x_i$ die verkauften Menge an Stahl in Tonnen und Preis und Kosten in 100 Euro/Tonne sein.
 
@@ -178,7 +180,7 @@ $x_1 = (x_1/2 - 24)/2 + 24 = x_1/4 + 12 ⇔ x_1 = 4 \cdot 12 / 3 = 16, x_2 = 16$
 
 Das Nash-Gleichgewicht liegt in diesem Beispiel also bei $x_1 = x_2 = 16$ und $p = 100 - 2(x_1+x_2) = 36$. $x_1 = x_2$ war zu erwarten, da beide Unternehmen den gleichen Markt mit identischen Kosten bedienen und ein linearer und symmetrischer Zusammenhang zwischen Preisen und Mengen angenommen wurde.
 
-#### Beispiel 3: konkurrierende Tankstellen<a id="beispiel-3-konkurrierende-tankstellen"></a>
+#### Beispiel 3: Konkurrierende Tankstellen<a id="beispiel-3-konkurrierende-tankstellen"></a>
 
 Beispiel: Zwei nichtkooperative Tankstellen $T_1$ und $T_2$ mit reinen Preisstrategien konkurrieren um Kunden. Beide beziehen ihr Benzin vom gleichen Großhändler zu 1 Euro/liter und haben gleiche Fixkosten von 1000 Euro/Tag für Gehälter, Pacht, Steuern, etc. Wir nehmen an, dass beide Tankstellen jeweils 10000 liter/Tag verkaufen, wenn beide Tankstellen ihr Benzin mit 2 Euro/liter anbieten.
 
@@ -238,7 +240,37 @@ In gemischten Strategien treffen die Spieler zufällige Entscheidungen zwischen 
 
 Das Indifferenzprinzip der Spieltheorie besagt: Eine gemischte Strategie ist nur dann optimal (eine beste Antwort), wenn jede mit positiver Wahrscheinlichkeit gewählte reine Strategie ebenfalls optimal (eine beste Antwort) ist. D.h. reine Strategien, die nicht optimal (keine beste Antwort) sind, werden für die optimale gemischte Strategie nicht gewählt (bzw. mit Wahrscheinlichkeit 0 gewählt). Die optimale gemischte Strategie ist daher eine Mischung der besten Antworten in reinen Strategien.
 
-#### Beispiel 4: Diebstahlkontrolle<a id="beispiel-4-diebstahlkontrolle"></a>
+Alle reinen Strategien, die in einem gemischten Gleichgewicht mit positiver Wahrscheinlichkeit gewählt werden, müssen die gleiche Auszahlungserwartung haben (andernfalls würde der Spieler die reine Strategie mit höherer Auszahlung verwenden).
+
+#### Satz von Nash<a id="satz-von-nash"></a>
+
+Satz von Nash: Alle Spiele mit einer endlichen Anzahl reiner Strategien haben mindestens ein Gleichgewicht in reinen oder gemischten Strategien. In jedem Spiel mit endlichen Strategiemengen existiert mindestens ein Nash-Gleichgewicht, wenn man gemischte Strategien zulässt.
+
+#### Beispiel 4: Sherlock Holmes und Professor Moriarty<a id="beispiel-4-sherlock-holmes-und-professor-moriarty"></a>
+
+In [Sir Arthur Conan Doyles](https://de.wikipedia.org/wiki/Arthur_Conan_Doyle) Kriminalerzählung ["Das letzte Problem"](https://de.wikipedia.org/wiki/Das_letzte_Problem) flieht [Sherlock Holmes](https://de.wikipedia.org/wiki/Sherlock_Holmes) vor seinem Widersacher, dem Mathematiker und Verbrechergenie [Professor Moriarty](https://de.wikipedia.org/wiki/Professor_Moriarty). Sherlock Holmes entkommt im Zug nach Dover, geht aber davon aus, dass er von Moriarty in einem Sonderzug verfolgt wird. [^1] Zwischen London und Dover gibt es nur einen Halt in Canterbury. Holmes überlegt daher, den Zug in Canterbury zu verlassen. Natürlich denkt auch Moriarty an diese Möglichkeit. Steigen aber beide an der gleichen Station aus, hat Moriarty die Möglichkeit, Holmes zu töten. Da Moriarty weiss, dass Holmes in Canterbury aussteigen könnte, wäre es da nicht besser, im Zug nach Dover zu bleiben? Da aber Moriarty diese Überlegung genauso anstellt, wäre es vielleicht doch besser den Zug in Canterbury zu verlassen?
+
+Das Problem ist ein Nullsummenspiel, das sich sich mit der 2x2-Spielmatrix wie folgt darstellen lässt:
+
+|                                               | **Holmes steigt in Dover aus ($q$)** | **Holmes steigt in Canterbury aus ($1-q$)** |
+| --------------------------------------------- | ------------------------------------ | ------------------------------------------- |
+| **Moriarty steigt in Dover aus ($p$)**        |        $(a ; -a) = (+1 ; -1)$        |           $(b ; -b) = ( 0 ;  0)$            |
+| **Moriarty steigt in Canterbury aus ($1-p$)** |        $(c ; -c) = (-1 ; +1)$        |           $(d ; -d) = (+1 ; -1)$            |
+
+Steigen beide in Dover oder Canterbury aus, gewinnt Moriarty und Holmes verliert (Nutzen: $+1 ; -1$). Fährt Holmes bis Dover und Moriarty nach Canterbury, gelingt Holmes die Flucht auf's Festland und Moriarty verliert (Nutzen: $-1 ; +1$). Steigt Holmes in Canterbury aus während Moriarty nach Dover fährt, ist die Situation unentschieden (denn Moriarty wartet weiter in Dover, Nutzen: $0 ; 0$).
+
+Es existiert keine dominante Strategie. Die Indifferenzbedingungen für ein 2x2-Nullsummenspiel ergeben:  
+Erwartungsnutzen für Moriarty: $E[U_{1}(s_{11})] = a q + b (1-q)$ und $E[U_{1}(s_{12})] = c q + d (1-q)$  
+Indifferenzbedingung für Moriarty: $E[U_{1}(s_{11})] = E[U_{1}(s_{12})] ⇔ a q + b (1-q) = c q + d (1-q)$  
+Erwartungsnutzen für Holmes: $E[U_{2}(s_{21})] = -a p - c (1-p)$ und $E[U_{2}(s_{22})] = -b p - d (1-p)$  
+Indifferenzbedingung für Holmes: $E[U_{2}(s_{21})] = E[U_{2}(s_{22})] ⇔ -a p - c (1-p) = -b p - d (1-p)$  
+[Lösen des Gleichungssystems](../src/holmes_moriarty.py) liefert für $a = +1, b = 0, c = -1, d = +1$:  
+$p = (d-c)/(a - b - c + d) = 2/3$  
+$q = (d-b)/(a - b - c + d) = 1/3$  
+
+Wie man sieht, ist das Problem von Sherlock Holmes ein Nullsummenspiel ohne dominante Strategie und ohne Gleichgewicht in reinen Strategien, aber mit einem Nash-Gleichgewicht in gemischten Strategien mit $p = 2/3$ und $q = 1/3$. Sherlock Holmes steigt daher in Canterbury aus, Moriarty dampft weiter nach Dover. Und so entkommt Sherlock Holmes zunächst seinem Verfolger.
+
+#### Beispiel 5: Diebstahlkontrolle<a id="beispiel-5-diebstahlkontrolle"></a>
 
 Ein Laden verkauft Waren zum Stückpreis von 100 Euro, kämpft aber gegen Verlust durch Diebstahl. Ehrliche Kunden bezahlen den vollen Verkaufspreis, unehrliche Kunden streichen diesen als Gewinn ein, müssen aber mit Kontrollen rechnen. Wird ein Kunde beim Diebstahl erwischt, muss dieser den doppelten Preis an den Ladenbesitzer bezahlen sowie eine Geldstrafe von 50 Euro an den Staat. Häufige Kontrollen verringern Verluste, zuviele Kontrollen kosten aber Zeit und vergraulen Kunden. Jede Kontrolle koste daher 10 Euro. Für jeden nicht entdeckten Diebstahl verliere der Händler den Waren-Einkaufspreis von 50 Euro; für jeden ehrlichen Kunden gewinnt der Händler 50 Euro.
 
@@ -270,7 +302,9 @@ Indifferenzbedingung für Spieler 2: $a_2 p + c_2 (1-p) = b_2 p + d_2 (1-p) ⇔ 
 
 ### Rückwärtsinduktion<a id="ruckwartsinduktion"></a>
 
-Rückwärtsinduktion (Backward Induction) ermittelt die besten Antworten ausgehend von den Endknoten eines Spielbaumes. Genauer: Teilspielperfekte Gleichgewichte können durch Rückwärtsinduktion ermittelt werden. Ein Nash-Gleichgewicht eines Extensivformspiels ist teilspielperfekt, wenn die Entscheidungen beliebiger Teilspiele Nash-Gleichgewichte ergeben (unabhängig davon, ob ein Teilspiel tatsächlich erreicht wird oder nicht).
+Rückwärtsinduktion (Backward Induction) ermittelt die besten Antworten ausgehend von den Endknoten eines Spielbaumes. Genauer: Teilspielperfekte Gleichgewichte können durch Rückwärtsinduktion ermittelt werden. Ein Nash-Gleichgewicht eines Extensivformspiels ist teilspielperfekt, wenn die Entscheidungen beliebiger Teilspiele Nash-Gleichgewichte ergeben (unabhängig davon, ob ein Teilspiel tatsächlich erreicht wird oder nicht). 
+
+Ein Teilspiel ist ein solcher Teil eines Spieles, der für sich allein ein vollständiges Spiel darstellt. Ein Teilspiel ist ein Spiel, das in einem einzelnen Entscheidungsknoten des Spielbaums beginnt und alle Knoten enthält, die diesem Knoten nachfolgen. Durch das Teilspiel dürfen keine nachfolgenden [Informationsbezirke](https://de.wikipedia.org/wiki/Informationsbezirk) zertrennt werden. Teilspielperfektheit lässt nur Gleichgewichte in nichtdominierten Strategien zu und hat damit ungefähr die gleiche Wirkung wie die Elimination von schwach dominierten Strategien, bevor Nash-Gleichgewichte bestimmt werden.
 
 Beispiel für 2 Spieler mit kleinem Spielbaum:
 ![SpieltheorieSkizze01](SpieltheorieSkizze01.png)
@@ -283,7 +317,7 @@ Algorithmisch entspricht die Rückwärtsinduktion dem [Backtracking](https://de.
 
 ### Sequentielle Spiele<a id="sequentielle-spiele"></a>
 
-#### Beispiel 5: Markteintritt<a id="beispiel-5-markteintritt"></a>
+#### Beispiel 6: Markteintritt<a id="beispiel-6-markteintritt"></a>
 
 Beispiel für ein Nash-Gleichgewicht in sequentiellen Spielen: Eine Tankstelle auf dem Land verkauft 10 Million Liter Benzin im Jahr zum Preis von 2 Euro/Liter, welches für 1 Euro/liter vom Großhändler eingekauft wird. Die Fixkosten zum Betrieb der Tankstelle betragen 1 Million Euro im Jahr; der Gewinn beträgt folglich 9 Millionen Euro/Jahr.
 
@@ -376,7 +410,7 @@ In Spielen mit vollständiger Information sind alle Spielregeln und alle bisheri
 Satz von Bayes: $P(A_i|B) = P(B|A_i) \cdot P(A_i) / P(B)$  
 Für disjunkte Ereignisse $A_i$ gilt: $P(B) = \sum_{j=1}^{N} P(B|A_j) \cdot P(A_j)$
 
-### Beispiel 6: Sheriff's dilemma<a id="beispiel-6-sheriffs-dilemma"></a>
+### Beispiel 7: Sheriff's dilemma<a id="beispiel-7-sheriffs-dilemma"></a>
 
 Wikipedia-Beispiel für ein Bayes-Gleichgewicht bei unvollständiger Information: [Sheriff's dilemma](https://en.wikipedia.org/wiki/Bayesian_game)
 
@@ -405,7 +439,7 @@ The sheriff would rather defend himself and shoot if the suspect shoots or not s
 
     When the type is "criminal", the dominant strategy for the suspect is to shoot, and when the type is "civilian", the dominant strategy for the suspect is not to shoot; alternative strictly dominated strategy can thus be removed. Given this, if the sheriff shoots, he will have a payoff of $0$ with probability $p$ and a payoff of $−1$ with probability ⁠$1-p$⁠, i.e., an expected payoff of ⁠$p-1$⁠; if the sheriff does not shoot, he will have a payoff of $−2$ with probability $p$ and a payoff of $0$ with probability $⁠1-p$⁠, i.e., an expected payoff of $⁠-2p$⁠. Thus, the Sheriff will always shoot if $⁠p-1 > -2p$⁠, i.e. when $⁠p > 1/3$⁠.	
 
-### Beispiel 7: Markteintritt<a id="beispiel-7-markteintritt"></a>
+### Beispiel 8: Markteintritt<a id="beispiel-8-markteintritt"></a>
 
 Beispiel für ein Bayes-Gleichgewicht bei unvollständiger Information: Wir verwenden wieder das Szenario von oben. Eine Tankstelle habe ein Monopol, ein Konkurrent erwägt den Markteintritt. Um die Konkurrenz aggressiv durch Dumpingpreise zu verdrängen, muss der Monopolist aber selber über Mittel verfügen. Der Monopolist kann vom Typ reich oder vom Typ arm sein: Nur ein reicher Monopolist kann einen Konkurrenzkampf durchstehen, ein armer Monopolist kann nur bluffen. Welche Mittel der Monopolist zur Verfügung hat, wissen die Konkurrenten nicht; die Konkurrenten können nur die Wahrscheinlichkeiten $q$ (Monopolist reich) oder $1-q$ (Monopolist arm) annehmen. In Spielen wie Poker entspricht dies genau den Annahmen über die unbekannten Karten der Mitspieler.
 
@@ -493,7 +527,7 @@ Je höher $q$ = $P$(Monopolist ist reich), desto kleiner die erforderliche Bluff
 
 ### Perfect Bayesian Equilibrium (PBE)<a id="perfect-bayesian-equilibrium-pbe"></a>
 
-"A [perfect Bayesian equilibrium (PBE)](https://de.wikipedia.org/wiki/Perfekt_bayessches_Gleichgewicht) is a set of strategies and beliefs such that the strategies are sequentially rational given the players’ beliefs and the players update beliefs via Bayes rule wherever possible." [^1] Eine Lösung, die nicht sowohl die sequentiellen Strategien als auch die Annahmen der Spieler enthält, kann daher kein perfektes bayessches Gleichgewicht sein.
+"A [perfect Bayesian equilibrium (PBE)](https://de.wikipedia.org/wiki/Perfekt_bayessches_Gleichgewicht) is a set of strategies and beliefs such that the strategies are sequentially rational given the players’ beliefs and the players update beliefs via Bayes rule wherever possible." [^2] Eine Lösung, die nicht sowohl die sequentiellen Strategien als auch die Annahmen der Spieler enthält, kann daher kein perfektes bayessches Gleichgewicht sein.
 
 Im Tankstellenbeispiel hängen die tatsächlichen Kosten eines Konkurrenzkampfes und damit die Kosten eines Bluffes für den Monopolisten davon ab, wie der Konkurrent auf aggressives Verhalten reagiert: Zieht er sich  zurück, behält der Monopolist seine Gewinne, andernfalls realisiert er Verluste. Das hängt wiederum davon ab, ob der Konkurrent selber arm oder reich ist. Ist der Konkurrent reich, kann er den Konkurrenzkampf durchziehen, ist er arm, muss er aufgeben oder selber bluffen. Der Bluff eines armen Konkurrenten ist erfolgreich, wenn der Monopolist arm ist und aufgibt; der Bluff des armen Konkurrenten schlägt fehl, wenn der Monopolist reich ist und nicht aufgibt. 
 
@@ -570,7 +604,7 @@ Voll-gemischte Strategien haben selten PBE's, da aus Ungleichungen (wie bei rein
 
 Die Suche nach PBE's erfolgt per Fallunterscheidung in [pbe_two_gas_stations.py](../src/pbe_two_gas_stations.py) unter Verwendung von sympy. In einigen Fällen bleibt unklar, ob die resultierenden Gleichungssysteme tatsächlich lösbar sind (d.h. ob diskrete Werte für alle Wahrscheinlichkeiten existieren, die alle Bedingungen eines PBEs erfüllen).
 
-### Beispiel 8: Bier-Quiche-Spiel<a id="beispiel-8-bier-quiche-spiel"></a>
+### Beispiel 9: Bier-Quiche-Spiel<a id="beispiel-9-bier-quiche-spiel"></a>
 
 Das [Bier-Quiche-Spiel](https://de.wikipedia.org/wiki/Signalspiel#Das_Bier-Quiche-Spiel) von Cho und Kreps (1987) ist ein [Signalspiel](https://de.wikipedia.org/wiki/Signalspiel) und ein beliebtes Beispiel für [perfekte bayessche Gleichgewichte (PBE)](https://de.wikipedia.org/wiki/Perfekt_bayessches_Gleichgewicht#Das_Bier-Quiche-Spiel). 
 
@@ -597,7 +631,7 @@ TODO: ## Evolutionäre Spieltheorie
 
 Die Spieltheorie kann einige interessante Paradoxa erklären, z.B.:
 * Das [Braess-Paradoxon](https://de.wikipedia.org/wiki/Braess-Paradoxon): Der Bau von zusätzlichen Straßen verschiebt das Gleichgewicht und verringert dadurch den Verkehrsfluss
-* Des [Eisverkäufer-am-Strand-Paradoxon](https://de.wikipedia.org/wiki/Hotellings_Gesetz): Konkurrenz kann auch ein für alle schlechteres Nash-Gleichgewicht schaffen
+* Das [Eisverkäufer-am-Strand-Paradoxon](https://de.wikipedia.org/wiki/Hotellings_Gesetz): Konkurrenz kann auch ein für alle schlechteres Nash-Gleichgewicht schaffen
 * Das [Nagel-Schreckenberg-Modell](https://de.wikipedia.org/wiki/Nagel-Schreckenberg-Modell): wie Staus aus dem Nichts entstehen
 
 ## Literatur<a id="literatur"></a>
@@ -609,4 +643,5 @@ Die Spieltheorie kann einige interessante Paradoxa erklären, z.B.:
 * [Python library nashpy to find Nash equilibriums in 2 player games](https://nashpy.readthedocs.io/en/stable/)
 * [Python library pygambit to find Nash equilibriums in extensive-form games](https://gambitproject.readthedocs.io/en/stable/pygambit.html)
 
-[^1]: https://gametheory101.com/courses/game-theory-101/perfect-bayesian-equilibrium/
+[^1]: https://projekt-gutenberg.org/authors/arthur-conan-doyle/books/fuenf-apfelsinenkerne-und-andere-detektivgeschichten/chapter/8/
+[^2]: https://gametheory101.com/courses/game-theory-101/perfect-bayesian-equilibrium/

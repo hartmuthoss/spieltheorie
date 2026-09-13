@@ -333,7 +333,7 @@ $$
 
 ### Forschung durch reinen Arbeitseinsatz<a id="forschung-durch-reinen-arbeitseinsatz"></a>
 
-Für $0\leq\alpha_{i,\mathrm{research}}<1$ gilt
+Für $0\leq\alpha_{i,\mathrm{research}} < 1$ gilt
 
 $$
 R_{i,\mathrm{fisch}}(t)
@@ -605,7 +605,7 @@ e^{-\lambda_{i,\mathrm{nuss,invest,autarkie}}t}}
 \right)^{1/\alpha_{i,\mathrm{nuss,invest}}}.
 $$
 
-Für $0\leq\alpha_{i,\mathrm{research}}<1$ sind die Forschungspfade
+Für $0\leq\alpha_{i,\mathrm{research}} < 1$ sind die Forschungspfade
 
 $$
 R_{i,\mathrm{fisch,autarkie}}(t)
@@ -694,7 +694,7 @@ Die Maximierung des diskontierten Autarkienutzens liefert die Entscheidungsvaria
 
 $$
 V_{i,\mathrm{autarkie}}
-=\sum_{0\leq t<t_{\max}}\delta_i^tU_{i,\mathrm{autarkie}}(t)
+=\sum_{0 \leq t \lt t_{\max}}\delta_i^tU_{i,\mathrm{autarkie}}(t)
 \longrightarrow\max.
 $$
 
@@ -703,14 +703,14 @@ $$
 Der diskontierte Nutzen von Akteur $i$ ist
 
 $$
-V_i=\sum_{0\leq t<t_{\max}}\delta_i^tU_i(t).
+V_i=\sum_{0 \leq t \lt t_{\max}}\delta_i^tU_i(t).
 $$
 
 Sein diskontierter Autarkienutzen ist
 
 $$
 V_{i,\mathrm{autarkie}}
-=\sum_{0\leq t<t_{\max}}\delta_i^tU_{i,\mathrm{autarkie}}(t).
+=\sum_{0 \leq t \lt t_{\max}}\delta_i^tU_{i,\mathrm{autarkie}}(t).
 $$
 
 Die logarithmierte Nash-Lösung lautet
